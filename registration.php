@@ -28,74 +28,32 @@
     </button>
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="/WEB-APP">Dashboard</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/WEB-APP/registration.php">Registration</a>
         </li>
-        
-      </ul>
-      <form class="d-flex">
-        <input onkeyup="search(this.value)" class="form-control me-2" type="text" placeholder="Search here">
-        <button class="btn btn-primary" type="button">Search</button>
-      </form>
+    </ul>
+     
     </div>
   </div>
 </nav>
-</nav>
 
   <div class="container">
-    <p class="h2 mt-3">Dashboard</p>
-    <p>You can view the employee info</p>
+    <p class="h2 mt-3">Registration</p>
+    <p>You can add record here</p>
   <div class="card mt-3">
   <div class="card-header">
     list of employees 
   </div>
   <div class="card-body">
-  
-<table class="table table-bordered table-hover"> 
-  <thead>
-<tr>
-<th width="250" style="text-align: center;">employee position</th>
-<th style="text align: left; pudding left: 20px">employee name</th>
-<th width="50" style="text-align: center;">Action</th>
-</tr>
-  </thead>
-<tbody id="results">
 
-</tbody>
-
-</table>
   </div>
   <div class="card-footer"></div>
 </div>
  
   </div>
-  
-  <div class="modal" id="view-info">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">employee info</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        Modal body..
-      </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.js" 

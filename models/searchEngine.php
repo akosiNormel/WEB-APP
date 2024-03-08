@@ -14,6 +14,11 @@ $value = $_POST['search'];
                 <tr>
                     <td style="text-align: center;"><?= $row['position'] ?></td>
                     <td><?= $row['name'] ?></td>
+                    <td class="d-grid">
+                    <button type="button" class="btn btn-sm btn-block btn-success" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#view-info">View</button>
+                    </td>
                 </tr>
             <?php
        }
