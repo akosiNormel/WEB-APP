@@ -4,7 +4,7 @@ include('../config/database.php');
 
 $value = $_POST['search'];
 
-   $sql = "SELECT * FROM employee WHERE (name LIKE '%$value%' OR position LIKE '%$value%')";
+   $sql = "SELECT * FROM t_students WHERE (s_last_name LIKE '%$value%' OR s_first_name LIKE '%$value%')";
     $result = $conn->query($sql);
 
    if ($result->num_rows > 0) {
@@ -12,8 +12,8 @@ $value = $_POST['search'];
        while ($row = $result->fetch_assoc()) {
             ?>
                 <tr>
-                    <td style="text-align: center;"><?= $row['position'] ?></td>
-                    <td><?= $row['name'] ?></td>
+                    <td style="text-align: center;"><?= $row['s_first_name'] ?></td>
+                    <td><?= $row['s_last_name'] ?></td>
                     <td class="d-grid">
                     <button type="button" class="btn btn-sm btn-block btn-success" 
                     data-bs-toggle="modal" 

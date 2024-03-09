@@ -47,18 +47,18 @@
 
   <div class="container">
     <p class="h2 mt-3">Dashboard</p>
-    <p>You can view the employee info</p>
+    <p>You can view the student info</p>
   <div class="card mt-3">
   <div class="card-header">
-    list of employees 
+    list of student 
   </div>
   <div class="card-body">
   
 <table class="table table-bordered table-hover"> 
   <thead>
 <tr>
-<th width="250" style="text-align: center;">employee position</th>
-<th style="text align: left; pudding left: 20px">employee name</th>
+<th width="250" style="text-align: center;">First Name</th>
+<th style="text align: left; pudding left: 20px">Last name</th>
 <th width="50" style="text-align: center;">Action</th>
 </tr>
   </thead>
@@ -79,7 +79,7 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">employee info</h4>
+        <h4 class="modal-title">Student info</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 

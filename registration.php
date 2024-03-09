@@ -44,13 +44,85 @@
     <p class="h2 mt-3">Registration</p>
     <p>You can add record here</p>
   <div class="card mt-3">
-  <div class="card-header">
-    list of employees 
-  </div>
-  <div class="card-body">
+ <form action="/WEB-APP/models/save.php" method="POST">
+        <div class="card-header">Registration form </div>
+        <div class="card-body">
+                <?php
+                    if(isset($_GET["success"])) {
+                     ?>
+                        <div class="alert alert-success">
+                        <b>New Student Added</b>. Congrats. Thank you.
+                      </div>
+                    <hr>
+                    <?php
+                    }elseif(isset($_GET["invalid"])) {
+                   ?>
+                        <div class="alert alert-danger">
+                        <b>Existed Application ID</b>. Please try another. Thank you.
+                      </div>
+                    <hr>
+                    <?php
+                    };
+                  
+                ?>
+           
+           <div class="row">
+                <div class="col-md-4">
+        <strong>Application ID:*(Required)</strong>
+      <input name="inp_appid" type="text" placeholder="Enter Application id here" class="form-control mt-2">
+                </div>
+                <div class="col-md-4">
+        <strong>Tes Award Number:*(Required)</strong>
+      <input name="inp_tesno" type="text" placeholder="Enter tes award number here" class="form-control mt-2">
+                </div>
+                <div class="col-md-4">
+        <strong>Student ID:*(Required)</strong>
+      <input name="inp_sid" type="text" placeholder="Enter student ID here" class="form-control mt-2">
+                </div>
+                <div class="col-md-3">
+        <strong>First Name:*(Required)</strong>
+      <input name="inp_fname" type="text" placeholder="Enter first name here" class="form-control mt-2">
+                </div>
+                <div class="col-md-3">
+        <strong>Last Name:*(Required)</strong>
+      <input name="inp_lname" type="text" placeholder="Enter last name here" class="form-control mt-2">
+                </div>
+                <div class="col-md-3">
+        <strong>Ext. Name:*(Optional)</strong>
+      <input name="inp_ename" type="text" placeholder="Enter ext. name here" class="form-control mt-2">
+                </div>
+                <div class="col-md-3">
+        <strong>Middle Name:*(Optional)</strong>
+      <input name="inp_mname" type="text" placeholder="Enter middle name here" class="form-control mt-2">
+                </div>
+                <div class="col-md-4">
+        <strong>Gender:*(Optional)</strong>
+        <select name="inp_gender" id="" class="form-control mt-2">
+            <option value="" disabled selected>--SELECT GENDER--</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+                </div>
+                <div class="col-md-4">
+        <strong>Award Batch:*(Required)</strong>
+      <input name="inp_batch" type="text" placeholder="Enter award batch here" class="form-control mt-2">
+                </div>
+                <div class="col-md-4">
+        <strong>Status:*(Required)</strong>
+      <input name="inp_status" type="text" placeholder="Enter award status here" class="form-control mt-2">
+                </div>
+                </div>
 
-  </div>
-  <div class="card-footer"></div>
+                    </div>
+    <div class="card-footer">
+        <span style="float: right">
+            <button class="btn btn-success">
+            Add New Student
+            </button>
+        </span>
+    </div>
+</form>
+
 </div>
  
   </div>
