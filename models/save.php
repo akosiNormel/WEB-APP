@@ -21,16 +21,36 @@ save($registration);
 function save($data)
 {
   
-    include('../config/database.php');include('../config/database.php');
+    include('../config/database.php');
   
     $attributes = implode(",", array_keys($data));
     $values = implode("," , array_values($data));
-    $query = "INSERT INTO t_students($attributes) VALUES ($values)";
+   
+   $app_id = $_POST['inp_appid'];
+   $validate = "SELECT COUNT(*) AS i FROM t_students WHERE s_app_id LIKE 'app_id'";
 
-    if($conn->query($query) === TRUE){
-        header('location: /WEB-APP/registration.php?success');
-    }else{
-        header('location: /WEB-APP/registration.php?invalid');
-    } 
+   $rs = $conn->query($validate);
+   $count = $rs->fetch_assoc();
+
+   if($count['i'] == 0){
+
+    $query = "INSERT INTO t_students($attributes) VALUES ($values)";
+    $conn->query($query);
+   
+    header('location: /WEB-APP/registration.php?success');
+   }else{
+    
+    header('location: /WEB-APP/registration.php?invalid');
+   }
+   
+    
+
+   // if($conn->query($query) === TRUE){
+    //    header('location: /WEB-APP/registration.php?success');
+   // }else{
+    //    header('location: /WEB-APP/registration.php?invalid');
+    //} 
+   
+   
     $conn->close();
 }
